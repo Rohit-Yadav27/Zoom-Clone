@@ -1,0 +1,225 @@
+.landingPageContainer{
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(/media/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.landingPageContainer nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-inline: 1.2rem;
+padding-block: 1.1rem;
+}
+
+.landingPageContainer nav h2{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.landingPageContainer nav .nav-links{
+  display: flex;
+  gap: 1.6rem;
+}
+
+.landingPageContainer nav .nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.landingPageContainer nav .nav-links a:first-child{
+  color: black;
+}
+
+.landingPageContainer nav .nav-links a:last-child{
+  color: lightblue;
+}
+
+.home h2{
+  color: black !important;
+}
+
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 80vh;
+  padding-inline: 3rem;
+  align-items: center;
+}
+
+.landingMainContainer > div:nth-child(1){
+  font-size: 1.9rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role="button"] {
+  background:#D97500;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 1.9rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role="button"] a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.9rem;
+}
+
+.landingMainContainer > div:nth-child(2) img{
+  height: 70vh;
+  width:auto ;
+}
+
+
+.signupPageContainer{
+  display:flex ;
+  min-height: 100vh;
+  
+}
+
+.signupPageContainer .photo-img {
+  flex-basis: 60vw;
+  height: 100vh;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.signupPageContainer .signup-process{
+  flex-basis: 40vw;
+}
+
+.signup-form{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  gap: 1.5rem;
+}
+
+.signup-form > div{
+  display: flex;
+  gap: 1rem; 
+}
+
+.bt-up{
+  width: 4.3rem;
+  border-radius: 0.5rem;
+  color: black;
+  height: 1.7rem;
+  border: none;
+}
+
+.active{
+  background-color: #0d6efd;
+  color: white;
+}
+
+.formContainer form{
+  display: flex;
+  flex-direction: column;
+  gap:1.6rem; 
+}
+
+.formContainer input{
+  width: 29vw;
+  height: 4vh;
+  padding-left: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.2rem;
+}
+
+.btn{
+  background-color:#0d6efd;
+  color: white;
+  height: 3.3vh;
+  border: none;
+  border-radius: 0.2rem;
+}  
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1.25rem;
+  text-align: center;
+}
+
+.navlist{
+ display: flex;
+ align-items: center;
+}
+
+.meetContainer{
+  display: flex;
+  padding-inline: 1.25rem;
+  height: 80vh;
+  gap: 10vw;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.leftPannel{
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.rightPannel{
+  display: flex;
+  align-items: center;
+}
+.rightPannel > img{
+  width: 30vw;
+  height:auto;
+  border-radius: 1.25rem;
+} 
+
+@media (max-width: 768px) {
+
+    .landingMainContainer {
+        flex-direction: column;
+        height: auto;
+        min-height: 80vh;
+        padding-inline: 1rem;
+        text-align: center;
+    }
+
+    .landingMainContainer > div:nth-child(2) img {
+        height: 40vh;
+        max-width: 90vw;
+    }
+
+    .signupPageContainer {
+        flex-direction: column;
+    }
+
+    .signupPageContainer .photo-img {
+        display: none;
+    }
+
+    .signupPageContainer .signup-process {
+        flex-basis: 100%;
+    }
+
+    .formContainer input {
+        width: 80vw;
+    }
+
+    .meetContainer {
+        flex-direction: column;
+        height: auto;
+        gap: 2rem;
+    }
+
+    .rightPannel > img {
+        width: 80vw;
+    }
+}
