@@ -1,5 +1,6 @@
 import { createContext} from "react";
 import axios from "axios";
+import server from "../../environment";
 
 
 export const HistoryContext = createContext({});
@@ -8,7 +9,7 @@ export const HistoryProvider = ({ children }) => {
 
      const getHistoryOfUser = async () => {
         try {
-            let request = await axios.get("http://localhost:3000/get_all_activity", {
+            let request = await axios.get(`${server}/get_all_activity`, {
                 params: {
                     token: localStorage.getItem("tokenn")
                 }
@@ -22,7 +23,7 @@ export const HistoryProvider = ({ children }) => {
 
     const addToUserHistory = async (meetingCode) => {
         try {
-            let request = await axios.post("http://localhost:3000/add_to_activity", {
+            let request = await axios.post(`${server}/add_to_activity`, {
                 token: localStorage.getItem("tokenn"),
                 meeting_code: meetingCode
             });

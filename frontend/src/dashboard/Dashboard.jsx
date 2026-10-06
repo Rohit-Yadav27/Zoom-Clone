@@ -5,6 +5,7 @@ import { IconButton, Button, TextField } from "@mui/material";
 import RestoreIcon from "@mui/icons-material/Restore";
 import { useNavigate } from "react-router-dom";
 import { HistoryContext } from '../contexts/HistoryContext';
+import server from "../../environment";
 
 function Dashboard() {
 
@@ -20,7 +21,7 @@ function Dashboard() {
   const handleLogout = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/logout",
+        `${server}/logout`,
         {},
         { withCredentials: true },
       );

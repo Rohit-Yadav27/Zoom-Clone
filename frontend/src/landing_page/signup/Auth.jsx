@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import server from "../../../environment";
 
 export default function Auth() {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ export default function Auth() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/signup",
+        `${server}/signup`,
         {
           ...inputValue,
         },
@@ -74,7 +75,7 @@ export default function Auth() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/login",
+        `${server}/login`,
         {
           ...inputValue,
         },

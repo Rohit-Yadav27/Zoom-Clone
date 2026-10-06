@@ -2,12 +2,13 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Signup from "./Signup";
+import server from "../../../environment";
 
 export default function Login() {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("http://localhost:3000/verify", {
+      .get(`${server}/verify`, {
         withCredentials: true,
       })
       .then((res) => {
