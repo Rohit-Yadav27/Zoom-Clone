@@ -17,7 +17,7 @@ const io = connectToSocket(server);
 
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://zoom-clone-1asu.onrender.com",
     credentials: true
 }));
 
