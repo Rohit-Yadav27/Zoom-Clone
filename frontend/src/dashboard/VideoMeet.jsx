@@ -549,7 +549,7 @@ export default function VideoMeetComponent() {
                             ref.srcObject = video.stream;
                         }
                     }}
-                    autoPlay muted
+                    autoPlay playsInline
                     
                     >
 
